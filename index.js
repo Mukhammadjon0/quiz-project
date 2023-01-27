@@ -67,7 +67,7 @@ function getSelected() {
     let answer
 
     answerEls.forEach(answerEl => {
-        if(answerEl.checked) {
+        if (answerEl.checked) {
             answer = answerEl.id
         }
     })
@@ -77,15 +77,15 @@ function getSelected() {
 
 submitBtn.addEventListener('click', () => {
     const answer = getSelected()
-    
-    if(answer) {
-        if(answer === quizData[currentQuiz].correct) {
+
+    if (answer) {
+        if (answer === quizData[currentQuiz].correct) {
             score++
         }
 
         currentQuiz++
 
-        if(currentQuiz < quizData.length) {
+        if (currentQuiz < quizData.length) {
             loadQuiz()
         } else {
             quiz.innerHTML = `
